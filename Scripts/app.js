@@ -67,23 +67,27 @@ let app;
       //Button click event listener with inline function
       ButtonName.addEventListener("click",function()
       {
+          // doesnt work properly but it should change the button content to hide details when clicked
         if (ButtonName.textContent="Learn More")
         {
             ButtonName.textContent="Hide Details";
-        }  else 
+        }  else //When the text inside is not learn more should change it to learn more
         {
             ButtonName.textContent="Learn More";
         }
-        
+
+        if (ButtonName.textContent="Hide Details")
+        { //should change the visibility of the paragraph if the button reads hide details
+            Paragraph1.style.visibility = "visible";
+        } else 
+        {//should change the visibility of the paragraph if the button reads anything else
+            Paragraph1.style.visibility = "hidden";
+        }    
       });
   
             
       }
        
-
-    
-
-
 
     window.addEventListener("load", Start);
 })(app || (app = {}));
